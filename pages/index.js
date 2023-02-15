@@ -2,12 +2,13 @@ import React from "react";
 
 import { client } from "@/lib/client";
 import { Product, FooterBanner, HeroBanner } from "../components";
+import banner from "@/sanity-ecommerce/schemas/banner";
 
 // getServerSidePropsでゲットしたpropsを引数にとる。
 const Home = ({ products, bannerData }) => {
   return (
     <>
-      <HeroBanner />
+      <HeroBanner heroBanner={bannerData.length && bannerData[0]} />
       <div className="products-heading">
         <h2>aaaaaaaaa</h2>
         <p>aaaaaaaaaa</p>
